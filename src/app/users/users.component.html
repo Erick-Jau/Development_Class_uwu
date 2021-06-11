@@ -7,19 +7,19 @@
         <div class="card-body">
 
 
-
+            
             <form [formGroup]="userForm">
 
-                <label>Username</label>
-                <input id="fullname" formControlName="fullname" type="text" class="form-control" placeholder="Add the full name of the user">
-                <div *ngIf="getControl.fullname.invalid && (getControl.fullname.dirty || getControl.fullname.touched)" class="alert alert-danger">
-                    <div *If="getControl.fullname.errors?.required">
+                <label>First Job</label>
+                <input id="firstjob" formControlName="firstjob" type="text" class="form-control" placeholder="Add the first job">
+                <div *ngIf="getControl.firstjob.invalid && (getControl.firstjob.dirty || getControl.firstjob.touched)" class="alert alert-danger">
+                    <div *If="getControl.firstjob.errors?.required">
                         Name cannot be empty
                     </div>
-                    <div *ngIf="getControl.fullname.errors?.minlength">
+                    <div *ngIf="getControl.firstjob.errors?.minlength">
                         Not enough characters
                     </div>
-                    <div *ngIf="getControl.fullname.errors?.maxlength">
+                    <div *ngIf="getControl.firstjob.errors?.maxlength">
                         The username exceeds the maximum number of characters
                     </div>
 
@@ -28,13 +28,13 @@
                 
                 <br>
 
-                <label>Email</label>
-                <input id="email" formControlName="email" type="text" class="form-control" placeholder="Add the email">
-                <div *ngIf="getControl.email.invalid && (getControl.email.dirty || getControl.email.touched)" class="alert alert-danger">
-                    <div *If="getControl.email.errors?.required">
+                <label>SecondJob</label>
+                <input id="secondjob" formControlName="secondjob" type="text" class="form-control" placeholder="Add the secondJob">
+                <div *ngIf="getControl.secondjob.invalid && (getControl.email.dirty || getControl.email.touched)" class="alert alert-danger">
+                    <div *If="getControl.secondjob.errors?.required">
                         email cannot be empty
                     </div>
-                    <div *ngIf="getControl.email.errors?.minlength">
+                    <div *ngIf="getControl.secondjob.errors?.minlength">
                         Not enough characters
                     </div>
                     <br>
@@ -43,11 +43,11 @@
 
                 <br>
 
-                <label>School</label>
-                <input id="school" formControlName="school" type="text" class="form-control" placeholder="Add the school">
-                <div *ngIf="getControl.school.invalid && (getControl.school.dirty || getControl.school.touched)" class="alert alert-danger">
-                    <div *If="getControl.school.errors?.required">
-                        Name cannot be empty
+                <label>ThirdJob</label>
+                <input id="thirdjob" formControlName="thirdjob" type="text" class="form-control" placeholder="add thirrd job">
+                <div *ngIf="getControl.thirdjob.invalid && (getControl.thirdjob.dirty || getControl.thirdjob.touched)" class="alert alert-danger">
+                    <div *If="getControl.thirdjob.errors?.required">
+                        cannot be empty
                     </div>
                     
                 </div>
@@ -55,7 +55,31 @@
                 <br>
 
                 <label>Telephone</label>
-                <input id="fullname" formControlName="fullname" type="text" class="form-control" placeholder="Add the telephone">
+                <input id="telephone" formControlName="telephone" type="text" class="form-control" placeholder="Add the telephone">
+                <br>
+
+                <label>CorporateEmail</label>
+                <input id="corporateemail" formControlName="corporateemail" type="text" class="form-control" placeholder="add corporate email">
+                <div *ngIf="getControl.corporateemail.invalid && (getControl.school.dirty || getControl.corporateemail.touched)" class="alert alert-danger">
+                    <div *If="getControl.corporateemail.errors?.required">
+                        cannot be empty
+                    </div>
+                    
+                </div>
+
+                <br>
+
+                <label>PersonalEmail</label>
+                <input id="personalemail" formControlName="personalemail" type="text" class="form-control" placeholder="add personal email">
+                <div *ngIf="getControl.personaemail.invalid && (getControl.personalemail.dirty || getControl.personalemail.touched)" class="alert alert-danger">
+                    <div *If="getControl.personalemail.errors?.required">
+                        cannot be empty
+                    </div>
+                    
+                </div>
+
+                <br>
+                <button href="home" class="nav-link">Submit</button>
 
             </form>
 

@@ -20,10 +20,12 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
 
     this.userForm = this.formBuilder.group({
-      fullname:new FormControl('',[Validators.required,Validators.minLength(8), Validators.maxLength(28)]),
-      email:new FormControl('',[Validators.required, Validators.minLength(8)]),
-      school:new FormControl('',[Validators.required]),
-      telephone:new FormControl('')
+      firstjob:new FormControl('',[Validators.required,Validators.minLength(8), Validators.maxLength(28)]),
+      secondjob:new FormControl('',[Validators.required, Validators.minLength(8)]),
+      thirdjob:new FormControl('',[Validators.required]),
+      telephone:new FormControl(''),
+      corporateemail:new FormControl('',[Validators.required]),
+      personalemail:new FormControl('',[Validators.required]),
     })
 
   }
